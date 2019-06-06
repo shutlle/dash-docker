@@ -14,4 +14,9 @@ Dockerfile for deploy nginx+uwsgi+django application deploying dashboard
 <p> docker rm [container_id] </p>
 <p> docker image rm dash</p>
 
+5. All clear
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+
 
