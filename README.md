@@ -2,21 +2,22 @@ Dockerfile for deploy nginx+uwsgi+django application deploying dashboard
 
 # to start
 1. Create a Docker Image:
-<p>docker build -t dash .</p>
+- docker build -t dash .
 
 2. Run Docker Container:
-<p>docker run -d -p 8000:8000 dash</p>
+- docker run -d -p 8000:8000 dash
 
 3. Follow to http://[docker-node]:8000/vpc
 
-4. Delete
-<p>docker stop [container_i] </p>
-<p> docker rm [container_id] </p>
-<p> docker image rm dash</p>
+4. Delete container
+- docker stop [container_i]
+- docker rm [container_id]
+- docker rmi dash
 
 5. All clear
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
+- docker stop $(docker ps -a -q)
+- docker rm $(docker ps -a -q)
+- docker rmi $(docker images -q)
+
 
 
