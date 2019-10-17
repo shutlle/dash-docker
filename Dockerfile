@@ -2,7 +2,9 @@
 FROM tiangolo/uwsgi-nginx:python3.7
 
 # application
-RUN cd /app && git clone https://github.com/shutlle/dash.git && pip3 install -r /app/dash/requirements.txt
+#RUN cd /app && git clone https://github.com/shutlle/dash.git && pip3 install -r /app/dash/requirements.txt
+RUN cd /app && git clone http://10.35.20.216:3000/ramis.satlykov/dash.git && pip3 install -r /app/dash/requirements.txt
+
 
 # nginx
 ENV LISTEN_PORT 8000
