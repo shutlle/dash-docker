@@ -6,7 +6,6 @@ pipeline {
     stage('test') {
       steps {
         echo "Hello world"
-        date
       }
     }
   }
