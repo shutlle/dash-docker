@@ -1,13 +1,8 @@
 pipeline {
-  agent none
+  agent {
+    dockerfile true
   stages {
     stage('test') {
-      agent {
-        dockerfile {
-          filename 'test'
-        }
-
-      }
       steps {
         sh 'echo test'
       }
